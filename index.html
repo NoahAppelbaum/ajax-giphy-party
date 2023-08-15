@@ -4,12 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<script src="https://unpkg.com/jquery"></script>
-<script src="app.js"></script>
+  <h1>GIPHY PARTY</h1>
+
+  <div class="search-area">
+    <form action="">
+      <input type="text" class="search" id="search-term">
+      <button class="submit-button" type="submit">Find GIF!</button>
+    </form>
+    <button class="remove-button">Remove GIFs</button>
+  </div>
+
+  <div class="display-area"></div>
+
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

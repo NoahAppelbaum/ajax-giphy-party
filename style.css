@@ -1,0 +1,13 @@
+.search-area {
+  display: inline-block;
+}
+
+.form {
+  /* display: inline-block; */
+  width: 40%;
+}
+
+.button {
+  /* display: inline-block; */
+  width: 80px;
+}
