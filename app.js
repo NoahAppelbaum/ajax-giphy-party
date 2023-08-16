@@ -25,14 +25,17 @@ async function getGifUrl(searchTerm) {
     q: searchTerm,
     limit: 1
   });
-  const response = await fetch(`https://api.giphy.com/v1/gifs/search?${parameters}`);
-  const jsonResponse = await response.json();
-  const gifUrl = await jsonResponse.data[0].images.original.url;
+  const response = await fetch(
+    `https://api.giphy.com/v1/gifs/search?${parameters}`
+  );
+  const giphyData = await response.json();
+  const gifUrl = await giphyData.data[0].images.original.url;
 
   return gifUrl;
 }
 
-/** addImageToPage: Updates DOM with new GIF based on passed URL in the display area */
+/** addImageToPage: Updates DOM with new GIF based
+ *  on passed URL in the display area */
 function addImageToPage(gifUrl) {
   const $img = $("<img>").attr("src", gifUrl);
   $(".display-area").append($img.get());
